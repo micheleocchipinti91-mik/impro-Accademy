@@ -1,4 +1,4 @@
-const CACHE_NAME = 'impro-academy-v2';
+const CACHE_NAME = 'impro-academy-v3';
 const ASSETS = [
   './index.html',
   './settings.css',
@@ -50,14 +50,4 @@ self.addEventListener('fetch', event => {
         return response;
       })
       .catch(() => {
-        // Offline: usa la cache
-        return caches.match(event.request).then(cached => {
-          if (cached) return cached;
-          // Fallback finale per navigazione
-          if (event.request.mode === 'navigate') {
-            return caches.match('./index.html');
-          }
-        });
-      })
-  );
-});
+        // Offline: usa la c
