@@ -1,6 +1,7 @@
-const CACHE_NAME = 'impro-academy-v1';
+const CACHE_NAME = 'impro-academy-v2';
 const ASSETS = [
   './index.html',
+  './settings.css',
   './manifest.json',
   './icons/icon-96.png',
   './icons/icon-144.png',
