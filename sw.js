@@ -1,4 +1,4 @@
-const CACHE_NAME = 'impro-academy-v3';
+const CACHE_NAME = 'impro-academy-v4';
 const ASSETS = [
   './index.html',
   './settings.css',
