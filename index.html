@@ -3700,7 +3700,7 @@ function renderBasiList(){
   </div>
   <div id="bSrchRes"></div>
   <div id="bMainList">
-    <div style="font-size:11px;color:var(--tx3);margin-bottom:8px">${all.length} basi disponibili &bull; catalogo ${REPERTORIO.length} titoli</div>`;
+    <div style="font-size:11px;color:var(--tx3);margin-bottom:8px">${all.length} basi disponibili</div>`;
   Object.entries(cats).forEach(([cat,label])=>{
     const ss=all.filter(s=>s.cat===cat);if(!ss.length)return;
     h+=`<div class="st">${label}</div>`;
