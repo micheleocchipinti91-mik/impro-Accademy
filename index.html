@@ -7,10 +7,10 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 <meta name="theme-color" content="#003399">
 <meta name="description" content="La tua palestra per teoria musicale e improvvisazione jazz">
-<title>Impro Academy</title>
 <link rel="manifest" href="manifest.json">
 <link rel="apple-touch-icon" href="icons/icon-180.png">
 <link rel="icon" type="image/png" sizes="32x32" href="icons/favicon-32.png">
+<title>Impro Academy</title>
 <style>
 *{box-sizing:border-box;margin:0;padding:0;-webkit-tap-highlight-color:transparent}
 :root{
@@ -2254,6 +2254,7 @@ function _buildChips(topIdx){
   const others=_srRes.filter((_,i)=>i!==topIdx).slice(0,4);
   if(!others.length)return '';
   let h=`<div class="st">Vedi anche</div><div style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:12px">`;
+  others.forEach(r=>{
     const i=_srRes.indexOf(r);
     const lbl=r.title.replace(/^\d+\.\s*/,'').split('—')[0].split('–')[0].trim();
     h+=`<button onclick="_showSr(${i})" style="background:var(--bg2);border:.5px solid var(--bd);border-radius:var(--rs);padding:5px 10px;font-size:12px;font-weight:600;color:var(--tx);cursor:pointer">${esc(lbl)}</button>`;
@@ -2265,7 +2266,6 @@ function esc(s){return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').repl
 
 initQuiz();buildSc();buildCh();renderExList();buildSrIdx();
 </script>
-
 <script>
 if ('serviceWorker' in navigator) {
   window.addEventListener('load', () => {
